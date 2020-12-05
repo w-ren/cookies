@@ -22,7 +22,7 @@ const app = new Vue({
   },
   mounted() {
     const chance = Math.random();
-    if (chance < 0.505) {
+    if (chance < 0.005) {
       this.biscuitTime = true;
     }  
   },
