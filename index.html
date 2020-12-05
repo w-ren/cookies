@@ -13,9 +13,10 @@
 <div
   class="flex items-center justify-center min-h-screen"
   id="app"
-  style="background-size: 150px; background-repeat: space;"
-  :style="{ 'background-image': biscuitTime ? 'url(https://cdn.pixabay.com/photo/2012/04/10/16/14/union-jack-26119__340.png)' : false }"
+  :style="backdrop"
+  style="background-size: 150px;"
 >
+  <div class="fixed top-0 right-0 font-mono mr-5 mt-3" :class="{'bg-gray-100 px-3 py-1 rounded-lg': biscuitTime && clicks > 4}">{{ clickCount }}</div>
   <div class="text-center bg-gray-100 p-8 rounded-lg shadow-lg mx-2" v-cloak id="card">
     <h1 class="text-4xl">
       Here's A {{ biscuitTime ? 'Biscuit' : 'Cookie' }}!
@@ -27,6 +28,7 @@
       :src="biscuitTime ? 'https://assets.stickpng.com/images/580b57fbd9996e24bc43c0f4.png' : 'https://cdn.pixabay.com/photo/2014/04/02/17/06/cookie-307960__340.png'"
       alt="biscuitTime ? 'Biscuit' : 'Cookie'"
       class="image"
+      @click="clicks++"
     >
   <h2 class="bg-gray-200 rounded px-5 py-3 mt-6">
      {{ chooseNote() }}
