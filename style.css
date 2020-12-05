@@ -1,0 +1,35 @@
+/*style of the cookie photo*/
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom:2%;
+  width: 35%;
+}
+/*style of the here's a cookie*/
+h1 {
+  margin-top: 3%;
+  font-family: 'Sansita Swashed', cursive;
+}
+/*style of the note text*/
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+/*style of the message text*/
+h3{
+  margin-bottom: auto;
+  font-family: 'Montserrat', sans-serif;
+}
+/*style of the background*/
+html {
+  background: lightblue;
+}
+/*makes everything centered*/
+#app{
+  max-width: 450px;
+}
+
+[v-cloak] {
+  display: none;
+}
