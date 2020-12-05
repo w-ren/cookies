@@ -10,22 +10,31 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div class="flex items-center justify-center min-h-screen">
-  <div class="text-center bg-gray-100 p-8 rounded-lg shadow-lg mx-2" v-cloak id="app">
+<div
+  class="flex items-center justify-center min-h-screen"
+  id="app"
+  style="background-size: 150px; background-repeat: space;"
+  :style="{ 'background-image': biscuitTime ? 'url(https://cdn.pixabay.com/photo/2012/04/10/16/14/union-jack-26119__340.png)' : false }"
+>
+  <div class="text-center bg-gray-100 p-8 rounded-lg shadow-lg mx-2" v-cloak id="card">
     <h1 class="text-4xl">
-      Here's A Cookie!
+      Here's A {{ biscuitTime ? 'Biscuit' : 'Cookie' }}!
     </h1>
    <h3 class="text-sm my-5 text-gray-600">
-     A lil goodie from ARK to you for finals because it's stressful whether or not you're a student or faculty.
+     A lil goodie from {{ biscuitTime ? 'THE QUEEN?!' : 'ARK'}} to you for finals because it's stressful whether or not you're a student or faculty.
     </h3>   
-    <img src="https://cdn.pixabay.com/photo/2014/04/02/17/06/cookie-307960__340.png" alt="Cookie" class="image">
+    <img
+      :src="biscuitTime ? 'https://assets.stickpng.com/images/580b57fbd9996e24bc43c0f4.png' : 'https://cdn.pixabay.com/photo/2014/04/02/17/06/cookie-307960__340.png'"
+      alt="biscuitTime ? 'Biscuit' : 'Cookie'"
+      class="image"
+    >
   <h2 class="bg-gray-200 rounded px-5 py-3 mt-6">
      {{ chooseNote() }}
   </h2>  
   </div>
 </div>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script><script  src="./script.js"></script>
 
 </body>
 </html>
