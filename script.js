@@ -8,7 +8,7 @@ const app = new Vue({
       'you are capable of many things',
       '😋',
     ],
-    biscuitFlag: 'https://cdn.pixabay.com/photo/2012/04/10/16/14/union-jack-26119__340.png',
+    biscuitFlag: 'https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_1280.jpg',
     biscuitMessage: 'Long live the Queen!',
     biscuitTime: false,
     clicks: 0,
@@ -31,7 +31,7 @@ const app = new Vue({
       if (this.biscuitTime) {
         return {
           'background-color': this.background,
-          'background-image': 'url(https://cdn.pixabay.com/photo/2012/04/10/16/14/union-jack-26119__340.png)',
+          'background-image': 'url(https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_1280.jpg)',
           'background-repeat': 'space',
           'background-size': '150px',
         };
@@ -50,6 +50,9 @@ const app = new Vue({
       }
       if (this.clicks > 123) {
         return `send us a photo on insta 😉 @lowellarkclub | ${this.clicks}`;
+      }
+      if (this.clicks > 109) {
+        return `uuhh...why are you still clicking?? | ${this.clicks}`;
       }
       if (this.clicks > 105) {
         return 'ye dats it 🎉';

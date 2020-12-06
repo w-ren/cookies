@@ -10,7 +10,7 @@
   user-select: none;
   -webkit-user-drag: none;
 }
-
+/*clicking mechanisms*/
 .image:hover {
   transition: all ease 0.2s;
   transform: scale(1.1);
